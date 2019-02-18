@@ -1,3 +1,4 @@
+{% extends 'base.html'%}
 {% import 'macros.html' as macro%}
 
 <!DOCTYPE html>
@@ -17,12 +18,17 @@
    <!-- <div class="container">
     {{macro.displaySources}}
    </div> -->
+
+   <!-- Content block -->
+   {% block content %}
+
    <div class="container">
+     <h2>General News</h2>
     <ul>
       {{macro.displaySources_list(general)}}
     </ul>
     <br><br>
-    <h2>Weather</h2>
+    <h2>Business</h2>
     <ul>
       {{macro.displaySources_list(business)}}
     </ul>
@@ -32,7 +38,7 @@
       {{macro.displaySources_list(sports)}}
     </ul>
   </div>
-    
+  {% endblock%}   
 </body>
 </html>
 
