@@ -1,0 +1,20 @@
+{% import 'macros.html' as macro%}
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> Welcome to the Breaking news updates </title>
+        {% endif %}
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>News Highlight</h1>
+        <h3>{{title}}</h3>
+    </div>
+    
+</body>
+</html>
+
