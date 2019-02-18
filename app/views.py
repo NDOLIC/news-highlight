@@ -11,12 +11,14 @@ def index():
     '''
     This view function returns the index page and its data
     '''
-todays_highlights = get_news("general")
-    todays_weather = get_news('weather')
-    todays_sports = get_news('sports')
-    news_sources = get_sources('sources')
+    
+    general_sources = get_sources('general')
+    business_sources = get_sources('business')
+    sports_sources = get_sources('sports')
+
     title = 'Home-Welcome to the Breaking news updates'
-    return render_template('index.html', title=title, general=todays_highlights ,weather=todays_weather,sports=todays_sports)
+    return render_template('index.html', title = title,general = general_sources, business= business_sources,sports=sports_sources)
+    # return render_template('index.html', title=title, general=todays_highlights ,weather=todays_weather,sports=todays_sports)
     
     # return render_template('index.html',title=title, sources=news_sources)
 

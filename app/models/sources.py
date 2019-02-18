@@ -1,4 +1,4 @@
-class sources:
+class Sources:
     '''
     Source class to define sources Objects
     '''
