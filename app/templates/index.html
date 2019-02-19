@@ -15,28 +15,63 @@
         <h1>News Highlight</h1>
         <h3>{{title}}</h3>
     </div>
-   <!-- <div class="container">
-    {{macro.displaySources}}
-   </div> -->
-
-   <!-- Content block -->
    {% block content %}
 
-   <div class="container">
-     <h2>General News</h2>
-    <ul>
-      {{macro.displaySources_list(general)}}
-    </ul>
-    <br><br>
-    <h2>Business</h2>
-    <ul>
-      {{macro.displaySources_list(business)}}
-    </ul>
-    <br><br>
-    <h2>Sports</h2>
-    <ul>
-      {{macro.displaySources_list(sports)}}
-    </ul>
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12 heading">
+              <h1>News Highlights</h1>
+          </div>
+      </div>
+      
+      <div class="row up">
+          <div class="col-md-12 categories">
+              <h2>General News</h2>
+          </div>
+          {{macro.displaySources(general)}}
+      </div>
+      
+      <div class="row up" >
+          <div class="col-md-12 categories">
+              <h2 >Business News</h2>
+          </div>
+          {{macro.displaySources(business)}}
+      </div>
+      
+      <div class="row up">
+          <div class="col-md-12 categories">
+              <h2>Entertainment News</h2>
+          </div>
+          {{macro.displaySources(entertainment)}}
+      </div>
+      
+      <div class="row up">
+          <div class="col-md-12 categories">
+              <h2>Sports News</h2>
+          </div>
+          {{macro.displaySources(sports)}}
+      </div>
+      
+      <div class="row up">
+          <div class="col-md-12 categories">
+              <h2>About Technology</h2>
+          </div>
+          {{macro.displaySources(technology)}}
+      </div>
+      
+      <div class="row up">
+          <div class="col-md-12 categories">
+              <h2>Sciences</h2>
+          </div>
+          {{macro.displaySources(science)}}
+      </div>
+  
+      <div class="row up">
+          <div class="col-md-12 categories">
+              <h2>Health</h2>
+          </div>
+          {{macro.displaySources(health)}}
+      </div>
   </div>
   {% endblock%}   
 </body>
