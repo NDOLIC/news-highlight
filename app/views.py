@@ -22,8 +22,3 @@ def index():
 
     title = 'Home-Welcome to the Breaking news updates'
     return render_template('index.html', title = title,general = general_sources, business= business_sources,sports=sports_sources,technology=technology_sources,science=sciences_sources,entertainment=entertainment_sources,health=health_sources)
-    # return render_template('index.html', title=title, general=todays_highlights ,weather=todays_weather,sports=todays_sports)
-    
-    # return render_template('index.html',title=title, sources=news_sources)
-
-
