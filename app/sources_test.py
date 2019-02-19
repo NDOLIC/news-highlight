@@ -1,8 +1,8 @@
 import unittest
 from models import sources
-sources = sources.sources
+sources = sources.Sources
 
-class MovieTest(unittest.TestCase):
+class SourcesTest(unittest.TestCase):
     '''
     Test Class to test the behaviour of the sources class
     '''
@@ -23,9 +23,9 @@ class MovieTest(unittest.TestCase):
        self.assertEqual(self.new_sources.id,"metro")
        self.assertEqual(self.new_sources.name,"Metro")
        self.assertEqual(self.new_sources.description,"News, Sport, Showbiz")
+       self.assertEqual(self.new_sources.url,"http://metro.co.uk")
        self.assertEqual(self.new_sources.category,"general")
        self.assertEqual(self.new_sources.language,"en")
-       self.assertEqual(self.new_sources.url,"http://www.independent.co.uk")
-
+       
 if __name__ == '__main__':
     unittest.main()
