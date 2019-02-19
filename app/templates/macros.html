@@ -5,17 +5,17 @@
     <!-- {% endfor %}
 
 {% endmacro %} --> 
-{% macro displaySources(cats) %} 
-{% for cat in cats %}
+{% macro displaySources(reads) %} 
+{% for read in reads %}
 <div class="col-md-3 single-source">
     <div class="row">
         <div class="col-md-4 source-name">
-            <a href>{{cat.name}}</a>
+            <a href>{{read.name}}</a>
         </div>
         <div class="col-md-7 source-details">
-            <p> {{cat.description|truncate(150)}}
+            <p> {{read.description|truncate(150)}}
                 <br>
-                <a href="/articles/{{cat.id}}">See articles</a>
+                <a href="/articles/{{read.id}}">See articles</a>
             
             </p>            
         </div>
