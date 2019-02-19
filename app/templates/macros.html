@@ -10,12 +10,12 @@
 <div class="col-md-3 single-source">
     <div class="row">
         <div class="col-md-4 source-name">
-            <a>{{cat.name}}</a> 
+            <a href>{{cat.name}}</a>
         </div>
         <div class="col-md-7 source-details">
             <p> {{cat.description|truncate(150)}}
                 <br>
-                <a href="/source/{{cat.id}}">See articles from this source</a>
+                <a href="/articles/{{cat.id}}">See articles</a>
             
             </p>            
         </div>
@@ -24,3 +24,17 @@
 {% endfor %} 
 {% endmacro %}
 
+<!-- {% macro displayArticlesList(articles_list) %}
+{% for article in articles_list %}
+{%if article.urlToImage%}
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="padding-bottom: 10px;">
+    <img class="img-responsive" src="{{article.urlToImage}}" alt="image">
+    <h4>{{article.title}}</h4>
+    <p>{{article.description}}</p>
+    <p>Created: {{article.publishedAt}}</p>
+    <a href="{{article.url}}" class="btn btn-success">Full Story</a>
+</div>
+{%endif%}
+{% endfor %}
+{% endmacro %}
+ -->

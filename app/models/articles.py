@@ -10,6 +10,5 @@ class Articles:
         self.description=description
         self.url=url
         self.urlToImage=urlToImage
-        self.url=url
         self.publishedAt=publishedAt
    
