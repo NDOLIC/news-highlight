@@ -1,6 +1,6 @@
 
 body{
-  background-color:rgba(0,0,0,2);
+  background-color:aliceblue;
   font-family: 'Courier New', Courier, monospace;
 }
 ul{
@@ -18,20 +18,39 @@ h6{
   text-decoration:underline;
 }
 p{
-  font-size:20px; font-family: 'Handlee';
+  font-size:15px; 
+  font-family: 'Handlee' monospace;
+  color:black; 
 }
-a{
-  border:1px solid black;
-}
+/* a{
+  border:0.9px solid black;
+  padding: 0px; */
+  /* margin-left: 2px; */
+/* } */
 h1{
   text-align: center;
-  color: white;
+  color: black;
 }
 h2{
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.row{
-  color: white;
+ .row{
+  color: black;
+  padding: 20px;
+  background-color: gray;
+} 
+h4{
+  color:black; 
+  font-family: monospace;
+  
+} 
+.news{
+  box-shadow:2px 2px 2px 2px lightgrey; 
+  height:500px; 
+  padding: 15px;
+}
+.btn{
+  background-color: grey;
 }

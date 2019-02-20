@@ -7,12 +7,12 @@
 {% endmacro %} --> 
 {% macro displaySources(reads) %} 
 {% for read in reads %}
-<div class="col-md-3 single-source">
+<div class="col-md-4 single-source">
     <div class="row">
         <div class="col-md-4 source-name">
-            <a href>{{read.name}}</a>
+            <h5>{{read.name}}</h5>
         </div>
-        <div class="col-md-7 source-details">
+        <div class="col-md-5 source-details">
             <p> {{read.description|truncate(150)}}
                 <br>
                 <a href="/articles/{{read.id}}">See articles</a>

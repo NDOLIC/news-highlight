@@ -1,6 +1,9 @@
 {% extends 'base.html'%}
 {% import 'macros.html' as macro %}
-
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    {% endblock %} 
 {% block content%}
 
 <div style="display: flex; flex-wrap: wrap; padding-bottom: 50px;">
@@ -11,13 +14,15 @@
 {% macro displayArticlesList(articles_list) %}
 {% for article in articles_list %}
 {%if article.urlToImage%}
-<div style="box-shadow:2px 2px 2px 2px lightgrey; height:500px; padding: 15px;" class="panel panel-default">
+<div class="news">
+<div class="panel panel-default">
     <img class="img-responsive" src="{{article.urlToImage}}" alt="image">
-    <h4 style="color:black; font-family: monospace;"> {{article.title}} </h4>
-    <p style="color:black; font-family: monospace;">{{article.description}}</p>
-    <p style="color:black; font-family: monospace;">Created: {{article.publishedAt}}</p>
+    <h4> {{article.title}} </h4>
+    <p>{{article.description}}</p>
+    <p>Created: {{article.publishedAt}}</p>
     <a href="{{article.url}}" class="btn btn-success">Full Story</a>
 
+</div>
 </div>
 {%endif%}
 {% endfor %}
