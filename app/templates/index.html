@@ -6,16 +6,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    {% endblock %} 
     {% if title %}
         <title> {{ title }}</title>
         {% else %}
         <title> Welcome to the Breaking news updates </title>
         {% endif %}
         <!--Styles block -->
-    {% block styles%}
-        {{ super() }}
-        <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-    {% endblock %} 
+    
 </head>
 <body>
     <div class="jumbotron">
@@ -24,7 +25,7 @@
     </div>
    {% block content %}
 
-  <div class="container-fluid">
+  <div class="container">
       <div class="row">
           <div class="col-md-12 heading">
               <h1>News Highlights</h1>

@@ -1,5 +1,3 @@
-NEWS_API_KEY = '908aa2def4ba4095ab935b052c76c0a6'
-
 class Config:
     '''
     General configuration parent class
